@@ -10,8 +10,6 @@ function initMap() {
         center: uluru
     });
 
-    handlePermission();
-
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function (data) {
                 console.log(data);
@@ -56,8 +54,8 @@ function initMap() {
 
 function refreshLocation() {
     navigator.geolocation.getCurrentPosition(function (data) {
-            // userPosition = {lat: data.coords.latitude, lng: data.coords.longitude};
-            // locationMarker.setPosition(userPosition);
+            userPosition = {lat: data.coords.latitude, lng: data.coords.longitude};
+            locationMarker.setPosition(userPosition);
         },
 
         function (error) {
@@ -120,27 +118,4 @@ function addPlaceOnMap(place) {
     });
 
     placesMarkers.push(placeMarker);
-}
-
-function handlePermission() {
-    navigator.permissions.query({name: 'geolocation'}).then(function (result) {
-        if (result.state === 'granted') {
-            report(result.state);
-            geoBtn.style.display = 'none';
-        } else if (result.state === 'prompt') {
-            report(result.state);
-            geoBtn.style.display = 'none';
-            navigator.geolocation.getCurrentPosition(revealPosition, positionDenied, geoSettings);
-        } else if (result.state === 'denied') {
-            report(result.state);
-            geoBtn.style.display = 'inline';
-        }
-        result.onchange = function () {
-            report(result.state);
-        }
-    });
-}
-
-function report(state) {
-    console.log('Permission ' + state);
 }
