@@ -2,6 +2,7 @@ var map;
 var locationMarker;
 var userPosition;
 var placesMarkers = [];
+var placesService;
 var zones = [
     {
         // CENTRU
@@ -84,6 +85,8 @@ function initMap() {
         streetViewControl: false
     });
 
+    placesService = new google.maps.places.PlacesService(map);
+
     drawZones(zones);
 
     if ("geolocation" in navigator) {
@@ -99,20 +102,12 @@ function initMap() {
 
                 map.panTo(locationMarker.getPosition());
 
-                var placesService = new google.maps.places.PlacesService(map);
-                zones.forEach(function (zone) {
-                    placesService.nearbySearch(
-                        {
-                            location: averagePoint(zone.polygonPoints),
-                            radius: 100,
-                            rankBy: google.maps.places.RankBy.PROMINENCE
-                        },
-                        function (results) {
-                            console.log(results[1]);
-                            addPlaceOnMap(results[1]);
-                        }
-                    );
-                });
+
+                for (var zoneIndex = 0; zoneIndex < zones.length; ++zoneIndex) {
+                    putPlace(averagePoint(zones[zoneIndex].polygonPoints), 500, zoneIndex, 1);
+                    zones[zoneIndex].fill = 0;
+                    zones[zoneIndex].unlocked = false;
+                }
             },
 
             function (error) {
@@ -151,10 +146,29 @@ function refreshLocation() {
             console.log('well done!');
             marker.setMap(null);
             user.experience += 100;
-            zones[0].setOptions({fillOpacity: zones[0].fill + 0.1});
-            zones[0].fill += 0.1;
+            zones[marker.zoneIndex].polygon.setOptions({fillOpacity: zones[marker.zoneIndex].fill + 0.1});
+            zones[marker.zoneIndex].fill += 0.1;
+
+            if (zones[marker.zoneIndex].unlocked === false) {
+                zones[marker.zoneIndex].unlocked = true;
+                putPlace(averagePoint(zones[marker.zoneIndex].polygonPoints), 500, marker.zoneIndex, 4);
+            }
         }
     })
+}
+
+function putPlace(location, radius, zoneIndex, nPlaces) {
+    placesService.nearbySearch(
+        {
+            location: location,
+            radius: radius,
+            rankBy: google.maps.places.RankBy.PROMINENCE
+        },
+        function (results) {
+            for (var i = 1; i <= nPlaces; ++i)
+                addPlaceOnMap(results[i], zoneIndex);
+        }
+    );
 }
 
 function toRadians(angle) {
@@ -176,13 +190,14 @@ function distanceBetween(posA, posB) {
     return R * c;
 }
 
-function addPlaceOnMap(place) {
+function addPlaceOnMap(place, zoneIndex) {
     var placeMarker = new google.maps.Marker(
         {
             position: place.geometry.location,
             map: map
         }
     );
+    placeMarker.zoneIndex = zoneIndex;
 
     var infoWindow = new google.maps.InfoWindow(
         {
@@ -204,13 +219,14 @@ function drawZones(zones) {
         var zonePolygon = new google.maps.Polygon({
             paths: zone.polygonPoints,
             strokeColor: zone.strokeColor,
-            strokeOpacity: 0.2,
+            strokeOpacity: 0,
             strokeWeight: 2,
             fillColor: zone.fillColor,
-            fillOpacity: 0.5
+            fillOpacity: 0
         });
 
         zone.polygon = zonePolygon;
+
         zonePolygon.setMap(map);
     })
 }

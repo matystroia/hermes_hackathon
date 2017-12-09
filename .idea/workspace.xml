@@ -2,63 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d132909-ff35-4252-95af-d02c064019a9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/city.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/material-kit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/material-kit.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/material-kit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/material.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/nouislider.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_checkboxes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_colors.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_dialogs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_dividers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_dropdown.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_example-pages.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_footers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_form.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_images.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_import-bs-less.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_import-bs-sass.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_info-areas.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_inputs-size.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_inputs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_lists.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_pills.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_popups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_progress.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_radios.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_ripples.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_sections.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_shadows.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_tabs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_togglebutton.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_variables_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/_welljumbo.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/plugins/_plugin-datepicker.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/plugins/_plugin-dropdownjs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/plugins/_plugin-nouislider.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/plugins/_plugin-selectize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/material-kit/plugins/_plugin-snackbarjs.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/map.js" afterPath="$PROJECT_DIR$/js/map.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -73,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="162" column="33" lean-forward="true" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
+            <state relative-caret-position="1782">
+              <caret line="138" column="100" lean-forward="true" selection-start-line="138" selection-start-column="100" selection-end-line="138" selection-end-column="100" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -100,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1621">
-              <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+            <state relative-caret-position="441">
+              <caret line="153" column="81" lean-forward="false" selection-start-line="153" selection-start-column="81" selection-end-line="153" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -132,6 +76,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>body</find>
+      <find>putPlace</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,8 +91,8 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/user.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/map.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/map.js" />
       </list>
     </option>
   </component>
@@ -303,12 +248,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512821542067</updated>
-      <workItem from="1512821543380" duration="23348000" />
+      <workItem from="1512821543380" duration="28728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23348000" />
+    <option name="totallyTimeSpent" value="28728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -464,6 +409,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="138" column="100" lean-forward="true" selection-start-line="138" selection-start-column="100" selection-end-line="138" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2402#2409#1" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -474,24 +434,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1621">
-          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+        <state relative-caret-position="441">
+          <caret line="153" column="81" lean-forward="false" selection-start-line="153" selection-start-column="81" selection-end-line="153" selection-end-column="81" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="162" column="33" lean-forward="true" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2402#2409#1" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
