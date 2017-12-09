@@ -49,7 +49,7 @@ function initMap() {
         alert('better luck next time')
     }
 
-    setInterval(refreshLocation, 5000);
+    setInterval(refreshLocation, 1000);
 }
 
 function refreshLocation() {
@@ -73,6 +73,7 @@ function refreshLocation() {
             ) <= 30) {
             console.log('well done!');
             marker.setMap(null);
+            user.experience += 100;
         }
     })
 }
@@ -93,7 +94,6 @@ function distanceBetween(posA, posB) {
         Math.sin(deltaLambda / 2) * Math.sin(deltaLambda / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-    console.log(c);
     return R * c;
 }
 
