@@ -71,7 +71,12 @@
 .table{
     margin-top: 50px;
 }
-    </style>
+#badges img {
+    margin-right: 25px;
+    margin-bottom: 10px;
+    opacity: 0.2;
+}
+</style>
 
 
     </head>
@@ -85,15 +90,30 @@
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="card">
                                 <div class="content text-center">
-                                        <img src="img/city.jpg" alt="Thumbnail Image" class="img-circle img-raised" style="width:75px;height:75px;">
+                                        <img src="img/city.jpg" class="img-circle img-raised" style="width:75px;height:75px;">
                                 </div>
                                 <div class="content text-center">
                                     Nume utilizator
                                 </div>
-                                <div class="content text-center">
-                                    Bagdes
+                                <div class="content text-center">Level 4</div>
+                                <div class="progress">
+
+                                    <div class="progress-bar" role="progressbar" id="pbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;" title="30%">
+                                    <span class="sr-only">30% Complete</span>
+                                    </div>
                                 </div>
+                                <div id="badges" class="content text-center">
+                                        <img src="img/centru.png" alt="">
+                                        <img src="img/manastur.png" alt="">
+                                        <img src="img/gruia.png" alt="">
+                                        <img src="img/marasti.png" alt="">
+                                        <img src="img/zorilor.png" alt="">
+                                        <img src="img/gheorgheni.png" alt="">
+                                    </div>
                             </div>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="position:relative;">
+                                    Launch demo modal
+                                  </button>
                             <table class="table">
                                 <thead style="color:#fff">
                                         <tr>
@@ -103,14 +123,16 @@
                                             <th>Level</th>
                                         </tr>
                                 </thead>
+                                <tbody>
+
+                                </tbody>
                             </table>
                         </div>
-                    <span style="font-size:30px;cursor:pointer;z-index:999999" onclick="openNav()">&#9776; open</span>
+                    <span style="font-size:30px;cursor:pointer;z-index:999999" onclick="openNav()">&#9776; EXPLORE</span>
 
                     </div>
         </div>
-    </div>
-
+        </div>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -121,11 +143,10 @@
                     <h4 class="modal-title">Quest</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-                    </p>
+                    <p>content</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-simple" data-toggle="modal" data-target="#questModal">Accept Quest</button>
+                    <button type="button" class="btn btn-default btn-simple" data-toggle="modal" data-dismiss="modal">Accept Quest</button>
                     <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -167,7 +188,7 @@
             }
     </script>
 
-
+    
 	<script src="js/jquery.min.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="js/material.min.js"></script>
