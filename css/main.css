@@ -108,6 +108,18 @@ html, body {
     width: 100%;
 }
 
+#bar {
+    z-index: 100000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.full {
+    width: 80%;
+}
+
 
 
 
