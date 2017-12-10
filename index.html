@@ -71,12 +71,17 @@
                         var level = (snapshot.val() && snapshot.val().level);
                         var experience = (snapshot.val() && snapshot.val().experience);
                         var levelExp = (snapshot.val() && snapshot.val().levelExp);
+                        var badgeInt = (snapshot.val() && snapshot.val().badges);
 
+                        for(var i=0;i<6;++i)
+                            if (badgeInt & Math.pow(2, i))
+                                $('#badges').children()[i].style = 'opacity: 1';
 
                         user.level = 1;
                         user.experience = 0;
                         user.levelExp = 300;
                         user.name = displayName;
+
 
                         if (level !== null)
                             user.level = level;

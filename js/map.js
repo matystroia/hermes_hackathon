@@ -374,12 +374,14 @@ function refreshLocation() {
             ) <= 50 && marker.getMap() === map) {
             console.log('well done!');
             marker.setMap(null);
-            addExp(100);
-            zones[marker.zoneIndex].polygon.setOptions({fillOpacity: zones[marker.zoneIndex].fill + 0.1});
-            zones[marker.zoneIndex].fill += 0.1;
 
+            zones[marker.zoneIndex].fill += 0.1;
             if (zones[marker.zoneIndex].fill === 0.5)
                 unlockBadge(marker.zoneIndex);
+
+            addExp(100);
+            zones[marker.zoneIndex].polygon.setOptions({fillOpacity: zones[marker.zoneIndex].fill + 0.1});
+
 
             if (zones[marker.zoneIndex].unlocked === false) {
                 zones[marker.zoneIndex].unlocked = true;
