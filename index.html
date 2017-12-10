@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
-	<link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <!--<link rel="stylesheet" href="css/normalize.css">-->
     <link rel="stylesheet" href="css/main.css">
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
@@ -56,6 +56,8 @@
                         });
 
                         users.sort(function (a, b) {
+                            if (a.level === b.level)
+                                return (a.experience < b.experience) ? 1 : -1;
                             return (a.level < b.level) ? 1 : -1;
                         });
 
