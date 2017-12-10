@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCMae0phU392hzly12XBSAbl02O6_KGNtk",
+    authDomain: "fstvlr-d5aeb.firebaseapp.com",
+    databaseURL: "https://fstvlr-d5aeb.firebaseio.com",
+    projectId: "fstvlr-d5aeb",
+    storageBucket: "fstvlr-d5aeb.appspot.com",
+    messagingSenderId: "239483498365"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        callbacks: {
+          signInSuccess: function(currentUser, credential, redirectUrl) {
+            // Do something.
+            // Return type determines whether we continue the redirect automatically
+            // or whether we leave that to developer to handle.
+            return true;
+          },
+          uiShown: function() {
+            // The widget is rendered.
+            // Hide the loader.
+            document.getElementById('loader').style.display = 'none';
+          }
+        },
+        credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
+        // Query parameter name for mode.
+        queryParameterForWidgetMode: 'mode',
+        // Query parameter name for sign in success url.
+        queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
+        // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+        signInFlow: 'popup',
+        signInSuccessUrl: 'index.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // Whether the display name should be displayed in the Sign Up page.
+            requireDisplayName: true
+          },
+          {
+            provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+            // Invisible reCAPTCHA with image challenge and bottom left badge.
+            recaptchaParameters: {
+              type: 'image',
+              size: 'normal',
+              badge: 'bottomleft'
+            },
+            defaultCountry: 'RO'
+          }
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+
+<style>
+
+html {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  font-family: 'Monofett', cursive !important;
+  font-size: 105px;
+  color: #fff;
+  /*border: 5px black solid;*/
+  text-align: center;
+  width: 98%;
+
+}
+
+.firebaseui-idp-list {
+  /*border: 5px black solid !important;*/
+  border-radius: 25px;
+  margin-top: 45px !important;
+}
+</style>
+</head>
+<body style="background-image: url('img/city.jpg')">
+  
+  <div class="container-fluid">
+  <div class="row">
+    <p id="title-container">fstvlr</p>
+  </div>
+</div>
+
+
+<div class="row">
+<div id="firebaseui-auth-container"></div>
+<div id="loader">Loading...</div></div>
+</body>
+</html>

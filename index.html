@@ -20,6 +20,51 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCMae0phU392hzly12XBSAbl02O6_KGNtk",
+        authDomain: "fstvlr-d5aeb.firebaseapp.com",
+        databaseURL: "https://fstvlr-d5aeb.firebaseio.com",
+        projectId: "fstvlr-d5aeb",
+        storageBucket: "fstvlr-d5aeb.appspot.com",
+        messagingSenderId: "239483498365"
+      };
+      firebase.initializeApp(config);
+      </script>
+      <script type="text/javascript">
+          initApp = function() {
+            firebase.auth().onAuthStateChanged(function(fuser) {
+              if (fuser) {
+                // User is signed in.
+                var displayName = fuser.displayName;
+                var email = fuser.email;
+                var emailVerified = fuser.emailVerified;
+                var photoURL = fuser.photoURL;
+                var uid = fuser.uid;
+                var phoneNumber = fuser.phoneNumber;
+                var providerData = fuser.providerData;
+                fuser.getIdToken().then(function(accessToken) {
+                  document.getElementById('user-photo').src = fuser.photoURL;
+                  //document.getElementById('user-photo').style.display = 'block';
+                  document.getElementById('user-name').textContent = displayName;
+                  //document.getElementById('user-email').textContent = email;
+                  firebase.database().ref('users/' + uid).set({s:'test'}); 
+                });
+              } else {
+                document.getElementById('user-photo').style.display = 'none';
+                document.getElementById('user-name').textContent = 'No user signed in.';
+                //document.getElementById('user-email').textContent = 'no email provided';
+              }
+            }, function(error) {
+              console.log(error);
+            });
+          };
+          window.addEventListener('load', function() {
+            initApp()
+          });
+        </script>
 
     <style>
         .sidenav {
@@ -90,10 +135,10 @@
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="card">
                                 <div class="content text-center">
-                                        <img src="img/city.jpg" class="img-circle img-raised" style="width:75px;height:75px;">
+                                        <img id="user-photo" src="" class="img-circle img-raised" style="width:75px;height:75px;">
                                 </div>
-                                <div class="content text-center">
-                                    Nume utilizator
+                                <div id="user-name" class="content text-center">
+                                
                                 </div>
                                 <div class="content text-center">Level 4</div>
                                 <div class="progress">
