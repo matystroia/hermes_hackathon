@@ -312,8 +312,17 @@ function initMap() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function (data) {
                 var userPosition = {lat: data.coords.latitude, lng: data.coords.longitude};
+
+                var icon = {
+                    url: "img/user.png",
+                    scaledSize: new google.maps.Size(32, 32),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(16, 16)
+                };
+
                 locationMarker = new google.maps.Marker(
                     {
+                        icon: icon,
                         position: userPosition,
                         map: map,
                         draggable: true
@@ -362,7 +371,7 @@ function refreshLocation() {
         if (distanceBetween(
                 {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()},
                 {lat: locationMarker.getPosition().lat(), lng: locationMarker.getPosition().lng()}
-            ) <= 30 && marker.getMap() === map) {
+            ) <= 50 && marker.getMap() === map) {
             console.log('well done!');
             marker.setMap(null);
             addExp(100);
@@ -414,8 +423,17 @@ function distanceBetween(posA, posB) {
 }
 
 function addPlaceOnMap(place, zoneIndex) {
+
+    var icon = {
+        url: "img/sign.png",
+        scaledSize: new google.maps.Size(32, 32),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(16, 16)
+    };
+
     var placeMarker = new google.maps.Marker(
         {
+            icon: icon,
             position: place.geometry.location,
             map: map
         }
